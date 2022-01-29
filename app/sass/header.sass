@@ -1,0 +1,141 @@
+@import "vars"
+
+/*==========  header  ==========*/
+header
+  position: fixed
+  left: 0
+  top: 0
+  width: 100%
+  z-index: 5
+
+  .logo
+    margin: 0 auto 0 0
+  .phone
+    margin: 0 80px
+
+.header
+  box-shadow: 0 0 10px rgba(#000, .1)
+
+.header-bottom
+  padding: 30px 0 31px
+  border-top: 1px solid #ededed
+  transition: all .5s ease
+  background: #fff
+
+.out
+  transform: translateY(-100%)
+
+.header-top
+  padding: 23px 0
+  font-weight: 300
+  background: #fff
+  position: relative
+  z-index: 1
+
+.logo
+  display: flex
+  align-items: center
+  font-size: 16px
+  font-weight: 300
+  letter-spacing: 0.4px
+  color: #000
+  &:hover
+    color: inherit
+
+.logo-icon
+  display: flex
+  align-items: center
+  width: 34px
+  margin: 0 21px 0 0
+  min-width: 34px
+
+.logo-text
+  max-width: 185px
+  width: 100%
+
+.phone
+  color: #000
+  &:hover
+    color: $accent
+
+.messenger
+  display: flex
+  align-items: center
+  justify-content: center
+  width: 23px
+  height: 23px
+  fill: #7D7D7D
+  &:hover
+    fill: $accent
+
+
+.menu
+  font-size: 20px
+  font-weight: 300
+  text-align: center
+  letter-spacing: 0.5px
+  width: 100%
+  display: flex
+  align-items: center
+  flex-wrap: wrap
+  justify-content: space-between
+  a
+    color: #000
+    &:hover
+      color: $accent
+  .active
+    font-weight: bold
+
+.trigger-menu
+  display: none
+  width: 24px
+  height: 16px
+  justify-content: space-between
+  flex-direction: column
+  span
+    display: block
+    width: 100%
+    background: #686868
+    height: 2px
+
+.mobile-menu
+  display: none
+  position: absolute
+  z-index: 3
+  right: 15px
+  top: 100%
+  box-shadow: 0 0 10px rgba(#000, .1)
+  background: rgba(#fff, .7)
+  max-width: 183px
+  width: 100%
+  &__body
+    width: 100%
+    padding: 19px 20px
+  .menu
+    font-size: 14px
+    text-align: left
+    li
+      margin: 0 0 20px
+      width: 100%
+      &:last-child
+        margin: 0
+  &__footer
+    width: 100%
+    padding: 22px 28px 19px
+  .phone
+    margin: 0
+    font-size: 12px
+    font-weight: 300
+    letter-spacing: 0.3px
+    color: #000
+  .schedule
+    font-size: 12px
+    font-weight: 300
+    color: #000
+    letter-spacing: 0.3px
+    margin: 16px 0
+  .messenger
+    margin: 0 0 0 5px
+
+/*==========  header end  ==========*/
+
