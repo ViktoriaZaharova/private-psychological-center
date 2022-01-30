@@ -1,7 +1,19 @@
 /*==========  Desktop First  ==========*/
 /* Large Devices, Wide Screens */
+@media only screen and (max-width: 1790px) {
+  .reviews-slider .slick-slide {
+    padding: 58px 50px 63px; } }
+
+@media only screen and (max-width: 1600px) {
+  .reviews-slider .slick-slide {
+    padding: 58px 0 63px; } }
+
 @media only screen and (max-width: 1200px) {
-  /**/ }
+  .about-gallery__item {
+    width: 100px;
+    height: 100px; }
+  .reviews {
+    padding: 60px 0; } }
 
 /* Medium Devices, Desktops */
 @media only screen and (max-width: 992px) {
@@ -17,10 +29,10 @@
       margin: 16px 0 23px; }
     footer .btn {
       margin: auto 0 0 0; }
-  .list-messenger {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start; }
+    footer .list-messenger {
+      -webkit-box-pack: start;
+          -ms-flex-pack: start;
+              justify-content: flex-start; }
   .list-address li {
     margin: 0 0 11px; }
   .prices-wrapper {
@@ -47,7 +59,76 @@
   .sidebar-box {
     margin: 0 0 45px; }
   .blog-box__link {
-    font-size: 18px; } }
+    font-size: 18px; }
+  .about-gallery-wrapper {
+    max-width: 500px;
+    margin: 0 auto; }
+  .about-total {
+    margin: 0 auto; }
+  .sales {
+    padding: 68px 0 46px; }
+  .sales-images {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: flex-end;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center; }
+  .sales-image-item:first-child {
+    margin: 0 -100px 0 50px; }
+  .sales-image-item:last-child {
+    margin: -250px 60px 0 auto; }
+  .sales-content {
+    max-width: none;
+    margin: 64px 0 0; }
+  .sales-images:before {
+    width: 100%;
+    height: 100%;
+    background-size: contain; }
+  .sales-images:after {
+    width: 100%;
+    height: 100%; }
+  .address-filial-item {
+    padding: 22px 13px; }
+  .slick-arrow {
+    width: 160px; }
+  .filial-gallery__item {
+    padding: 0 10px; }
+  .reviews {
+    padding: 48px 0; }
+  .reviews-slider .slick-slide {
+    padding: 22px 35px 27px;
+    -webkit-transform: scale(1);
+            transform: scale(1); }
+  .reviews-box {
+    max-width: 100%;
+    margin: 0 auto; }
+  .blog .links-blog {
+    margin: 20px auto 0; }
+  .question {
+    padding: 70px 0; }
+    .question h2 {
+      margin: 0 0 22px; }
+  .accordion {
+    max-width: none; }
+  .psychologists-card .box-text {
+    max-width: none; }
+  .nav-tabs-blog .nav-link {
+    min-height: 80px; }
+    .nav-tabs-blog .nav-link:before {
+      width: 60px;
+      height: 60px;
+      bottom: -28px;
+      border-radius: 6px; }
+  .post-box {
+    margin: 0 0 50px; }
+  .contacts-page {
+    margin: 70px 0; }
+  .btn-call {
+    margin: 30px auto 0; } }
 
 /* Small Devices, Tablets */
 @media only screen and (max-width: 768px) {
@@ -123,7 +204,53 @@
     font-size: 16px; }
     .links-accent .links-icon {
       width: 13px;
-      height: 10px; } }
+      height: 10px; }
+  .address-filial {
+    padding: 48px 0 52px; }
+  .address-filial-slider__nav {
+    margin: 0 auto 27px; }
+  .slider-nav .slick-dots {
+    margin: 0 40px; }
+  .filial-gallery__item {
+    max-width: 33.3%; }
+  .reviews-box {
+    padding: 20px; }
+  .blog {
+    padding: 100px 0; }
+  .psychologists-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin: 0 auto 60px; }
+    .psychologists-card__user {
+      max-width: none;
+      margin: 0 auto 29px; }
+    .psychologists-card__avatar {
+      width: 145px;
+      height: 145px;
+      margin: 0 auto; }
+    .psychologists-card__content {
+      padding: 0;
+      width: 100%;
+      text-align: center; }
+    .psychologists-card .btn {
+      margin: 23px auto 0; }
+    .psychologists-card .links-details {
+      margin: 0 auto; }
+  .psychologists {
+    padding: 70px 0; }
+    .psychologists .subtext {
+      margin: 16px auto 58px; }
+  .article-page .form-search {
+    margin: 0 0 48px; }
+  .form-search {
+    max-width: none; }
+  .video {
+    margin: 40px 0; } }
 
 /* Extra Small Devices, Phones */
 @media only screen and (max-width: 576px) {
@@ -200,7 +327,7 @@
     .table-price td {
       padding: 12px 12px; }
   .home {
-    padding: 52px 0 17px; }
+    padding: 52px 0; }
     .home .subtext {
       margin: 19px 0 25px;
       max-width: 180px; }
@@ -245,7 +372,235 @@
   .error-page {
     padding: 47px 0 52px; }
     .error-page h1 {
-      margin: 17px auto 46px; } }
+      margin: 17px auto 46px; }
+  .about {
+    padding: 0 0 48px; }
+  .about-total {
+    padding: 18px 40px 24px; }
+    .about-total h3 {
+      font-size: 16px; }
+    .about-total:before {
+      width: 220px;
+      height: 220px; }
+  .about-gallery__item {
+    width: 65px;
+    height: 65px;
+    min-width: 65px;
+    margin: 0 4px 15px;
+    border-width: 7px; }
+  .about-gallery__item:nth-child(2), .about-gallery__item:nth-child(5) {
+    margin: 35px 4px -45px; }
+  .about-gallery-wrapper {
+    max-width: 270px; }
+  .about-content {
+    margin: 48px 0 0; }
+    .about-content .subtext {
+      margin: 19px 0;
+      max-width: 260px; }
+  .sales-image-item:first-child {
+    max-width: 238px;
+    margin: 0; }
+  .sales-image-item:last-child {
+    max-width: 75px;
+    margin: 0 60px -20px -60px; }
+  .sales-images:after {
+    width: 320px;
+    height: 286px;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%); }
+  .sales-images:before {
+    width: 288px;
+    height: 215px;
+    left: 45%; }
+  .sales-content .box-text {
+    margin: 18px 0 22px; }
+  .sales-content .btn {
+    margin: 33px 0 0; }
+  .address-filial h2 {
+    text-align: left; }
+  .address-filial .subtext {
+    text-align: left;
+    margin: 18px 0; }
+  .address-filial .links-details {
+    font-size: 16px; }
+    .address-filial .links-details .links-icon {
+      max-width: 13px; }
+  .address-filial-slider .slick-slide {
+    padding: 20px 20px 26px; }
+  .address-filial-item__head {
+    padding: 0 0 22px;
+    border: none; }
+  .address-filial-item__body {
+    padding: 0; }
+  .address-filial-item .tabs__caption {
+    display: none; }
+  .address-filial-item .tabs__content {
+    display: block;
+    border-bottom: 1px solid #979797;
+    padding: 0 0 22px;
+    margin: 0 0 23px;
+    font-size: 16px; }
+    .address-filial-item .tabs__content:last-child {
+      border: none;
+      padding: 0;
+      margin: 0; }
+  .tabs-toggle {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 0 20px; }
+    .tabs-toggle__icon img {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg); }
+    .tabs-toggle.click .tabs-toggle__icon img {
+      -webkit-transform: none;
+              transform: none; }
+  .address-box, .tabs__content {
+    font-size: 16px; }
+  .map-wrapper {
+    height: 372px; }
+  .slick-dots li {
+    width: 8px;
+    height: 8px;
+    margin: 0 11px 0 0; }
+  .slick-dots .slick-active {
+    width: 10px;
+    height: 10px; }
+  .reviews-box {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
+    .reviews-box__user {
+      width: 100%;
+      font-size: 16px;
+      max-width: none; }
+    .reviews-box__avatar {
+      margin: 0 auto 13px;
+      max-width: 82px;
+      height: 82px; }
+    .reviews-box__name {
+      margin: 13px auto 0; }
+    .reviews-box__content {
+      width: 100%;
+      padding: 0;
+      margin: 13px 0 0; }
+    .reviews-box .box-text {
+      text-align: center;
+      font-size: 14px;
+      letter-spacing: 0.35px; }
+    .reviews-box .links-details {
+      margin: 20px auto 0;
+      font-size: 14px;
+      font-weight: 500;
+      color: #0abab5; }
+      .reviews-box .links-details .links-icon {
+        max-width: 8px;
+        margin: 0 0 0 12px; }
+  .view-all-box {
+    margin: 22px auto 0; }
+  .reviews h2 {
+    text-align: left;
+    max-width: 195px; }
+  .reviews .subtext {
+    text-align: left;
+    margin: 19px 0 0; }
+  .blog {
+    padding: 46px 0 48px; }
+    .blog .subtext {
+      margin: 19px 0 0; }
+  .blog-slider .slick-slide {
+    margin: 25px auto; }
+  .blog-card {
+    border-radius: 8px; }
+    .blog-card__top {
+      font-size: 10px; }
+    .blog-card__img {
+      height: 142px; }
+    .blog-card__body {
+      height: calc(100% - 142px);
+      padding: 15px 20px 20px; }
+      .blog-card__body .box-text {
+        text-align: center;
+        font-size: 14px; }
+    .blog-card h3 {
+      text-align: center;
+      margin: 18px auto 20px;
+      font-size: 16px;
+      letter-spacing: 0.4px; }
+    .blog-card .links-details {
+      margin: 0 auto;
+      color: #0abab5;
+      font-size: 14px;
+      font-weight: 500; }
+      .blog-card .links-details .links-icon {
+        max-width: 8px; }
+  .question .subtext {
+    margin: 20px 0 25px;
+    max-width: 240px; }
+  .question {
+    padding: 48px 0 52px; }
+  .accordion .card {
+    padding: 23px 0;
+    border-bottom: 1px solid #979797;
+    margin: 0; }
+  .accordion .card-header {
+    font-size: 16px; }
+    .accordion .card-header:before {
+      display: none; }
+  .accordion .card-body {
+    padding: 20px 0 0; }
+  .accordion-arrow {
+    max-width: 20px;
+    padding: 0; }
+  .accordion > .card:not(:last-of-type) {
+    border-bottom: 1px solid #979797; }
+  .psychologists {
+    padding: 48px 0 52px; }
+  .psychologists-card .box-text {
+    font-size: 14px;
+    margin: 17px auto 10px; }
+  .psychologists-card .price {
+    font-size: 12px;
+    margin: 0 0 20px; }
+  .psychologists-card .links-details {
+    color: #0abab5;
+    font-size: 14px;
+    font-weight: 500; }
+  .links-details .svg-icon {
+    width: 8px;
+    height: 9px; }
+  .article-page h1 {
+    margin: 0 0 11px; }
+  .form-search input {
+    font-size: 16px;
+    padding: 0 0 11px; }
+  .sidebar .blog-box {
+    display: none; }
+    .sidebar .blog-box:nth-child(-n+4) {
+      display: block; }
+  .video {
+    margin: 20px 0; }
+  .nav-tabs-blog {
+    font-size: 16px; }
+    .nav-tabs-blog .nav-link {
+      min-height: 61px; }
+      .nav-tabs-blog .nav-link:before {
+        width: 40px;
+        height: 40px;
+        bottom: -18px; }
+  .contacts-page {
+    margin: 48px 0; }
+    .contacts-page .subtext {
+      margin: 19px auto 26px;
+      max-width: 250px; }
+  .btn-call {
+    margin: 26px auto 0; } }
 
 @media only screen and (max-width: 480px) {
   .btn {
