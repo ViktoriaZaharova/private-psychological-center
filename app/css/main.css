@@ -72,21 +72,166 @@ input, textarea, select {
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
-  padding: 0;
+  padding: 0 0 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   font-family: "Roboto", sans-serif;
   border: none;
     border-radius: 0;
-  width: 100%; }
+    border-bottom: 1px solid #000;
+  width: 100%;
+  color: #000;
+  letter-spacing: 0.6px;
+  font-size: 24px; }
+  input::-webkit-input-placeholder, textarea::-webkit-input-placeholder, select::-webkit-input-placeholder {
+    color: #707070; }
+  input::-moz-placeholder, textarea::-moz-placeholder, select::-moz-placeholder {
+    color: #707070; }
+  input::-ms-input-placeholder, textarea::-ms-input-placeholder, select::-ms-input-placeholder {
+    color: #707070; }
+  input::placeholder, textarea::placeholder, select::placeholder {
+    color: #707070; }
   input:hover, textarea:hover, select:hover {
     outline: none;
     -webkit-box-shadow: none;
             box-shadow: none; }
 
+select {
+  -moz-appearance: none;
+       appearance: none;
+  -webkit-appearance: none;
+  color: #707070;
+  background: url("../img/arrow-bottom.png") no-repeat right center;
+    background-size: 30px; }
+
+textarea {
+  padding: 16px 18px;
+  border: solid 1px #000;
+    border-radius: 8px;
+  height: 257px; }
+
 label {
   display: block;
   width: 100%; }
+
+.checkbox {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin: 52px 0 58px;
+  letter-spacing: 0.6px;
+  font-size: 24px;
+  color: #707070; }
+
+.inp-check {
+  display: none; }
+
+.checkbox-custom {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  cursor: pointer;
+  margin: 8px 12px 0 0;
+  width: 17px;
+  height: 17px;
+  min-width: 17px;
+  border: 1px solid #000;
+    border-radius: 3px; }
+  .checkbox-custom:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 2px;
+    -webkit-transform: translate(-50%, 0);
+            transform: translate(-50%, 0);
+    width: 10px;
+    height: 10px; }
+
+.inp-check:checked + .checkbox-custom {
+  border-color: #0abab5; }
+  .inp-check:checked + .checkbox-custom:before {
+    background: url("../img/check.png") no-repeat center;
+      background-size: 100%; }
+
+.radio {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  letter-spacing: 0.5px;
+  font-size: 20px;
+  color: #000;
+  cursor: pointer;
+  position: relative;
+  z-index: 1; }
+
+.inp-radio {
+  display: none; }
+
+.radio-text {
+  border: solid 1px #757575;
+    border-radius: 8px;
+  padding: 26px 11px;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+  position: relative;
+  z-index: 1; }
+  .radio-text:before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
+    width: calc(100% + 3px);
+    height: calc(100% + 3px);
+    border: 3px solid transparent;
+      border-radius: 8px;
+    z-index: -1;
+    -webkit-transition: .3s ease;
+    transition: .3s ease; }
+  .radio-text__icon {
+    width: 51px;
+    height: 53px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-width: 51px; }
+  .radio-text__content {
+    width: calc(100% - 51px);
+    padding: 0 0 0 24px; }
+
+.inp-radio:checked + .radio-text:before {
+  border: 3px solid #0abab5;
+  z-index: 1; }
 
 button, .btn {
   outline: none;
@@ -1421,12 +1566,15 @@ a.color-accent:hover {
   text-align: center;
   letter-spacing: 0.5px;
   font-size: 20px; }
+  .nav-tabs-rental > li {
+    width: calc(33.3% - 5px); }
   .nav-tabs-rental .nav-link {
+    width: 100%;
+    height: 100%;
     padding: 30px 36px;
     text-align: center;
     border-radius: 8px;
     border: solid 1px #757575;
-    width: calc(33.3% - 5px);
     color: #363636; }
     .nav-tabs-rental .nav-link.active {
       border: solid 3px #239c99; }
@@ -1439,7 +1587,9 @@ a.color-accent:hover {
 .rental-office-slider__img {
   height: 600px;
   width: 100%;
-  margin: 0 auto 49px; }
+  margin: 0 auto 49px;
+  border-radius: 8px;
+  overflow: hidden; }
   .rental-office-slider__img img {
     height: 100%;
     -o-object-fit: cover;
@@ -1453,14 +1603,391 @@ a.color-accent:hover {
 .office-rental-content {
   padding: 58px 0 141px; }
 
+.list-option {
+  margin: 77px 0 58px;
+  max-width: 390px;
+  width: 100%;
+  color: #383838;
+  font-size: 20px;
+  letter-spacing: 0.5px; }
+  .list-option li {
+    margin: 0 0 58px; }
+    .list-option li:last-child {
+      margin: 0; }
+
+.description-text {
+  margin: 44px 0 0;
+  letter-spacing: 0.4px; }
+
 /*==========  office-rental page end  ==========*/
-/*==========  consulting page  ==========*/
-/*==========  consulting page end  ==========*/
-/*==========  consulting page  ==========*/
-/*==========  consulting page end  ==========*/
-/*==========  consulting page  ==========*/
-/*==========  consulting page end  ==========*/
-/*==========  consulting page  ==========*/
-/*==========  consulting page end  ==========*/
-/*==========  consulting page  ==========*/
-/*==========  consulting page end  ==========*/
+/*==========  thanks page  ==========*/
+.thanks-page {
+  padding: 200px 0; }
+  .thanks-page .subtext {
+    margin: 29px auto 0;
+    max-width: 600px; }
+
+/*==========  thanks page end  ==========*/
+/*==========  home-record-private page  ==========*/
+.home-record-private {
+  padding: 100px 0 0; }
+  .home-record-private .home-img {
+    max-width: none; }
+    .home-record-private .home-img img {
+      width: 100%; }
+
+/*==========  home-record-private page end  ==========*/
+/*==========  making-an-appointment page  ==========*/
+.making-an-appointment {
+  padding: 138px 0 146px; }
+  .making-an-appointment .subtext {
+    margin: 40px 0 37px; }
+  .making-an-appointment h3 {
+    font-weight: bold; }
+
+.form-appointment {
+  margin: 53px 0 0; }
+  .form-appointment label {
+    margin: 0 0 56px; }
+  .form-appointment button {
+    margin: 58px auto 0; }
+  .form-appointment .description-text {
+    font-size: 20px;
+    color: #707070;
+    margin: 0 0 52px; }
+
+.form-group {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  margin: 0; }
+  .form-group label {
+    width: calc(50% - 35px); }
+
+/*==========  making-an-appointment page end  ==========*/
+/*==========  record page  ==========*/
+.record-page {
+  padding: 70px 0 15px; }
+  .record-page .subtext {
+    margin: 28px auto 38px;
+    max-width: 380px; }
+
+.form-record {
+  margin: 0; }
+  .form-record .radio input {
+    border: none; }
+
+.form-step {
+  display: none;
+  margin: 0 0 140px; }
+  .form-step.active {
+    display: block; }
+
+.form-step-item {
+  width: 100%;
+  margin: 0 0 57px; }
+  .form-step-item:last-child {
+    margin: 0; }
+  .form-step-item h3 {
+    text-align: center;
+    margin: 0 auto 53px;
+    font-weight: bold;
+    max-width: 480px;
+    width: 100%; }
+
+.btn-next-step {
+  margin: 0 auto 0; }
+
+.list-radio {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: stretch;
+      -ms-flex-align: stretch;
+          align-items: stretch;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between; }
+  .list-radio li {
+    width: calc(50% - 8px);
+    margin: 0 0 16px; }
+  .list-radio .radio {
+    width: 100%;
+    height: 100%;
+    margin: 0; }
+
+.list-radio-filial .radio-text__content {
+  padding: 0;
+  width: 100%; }
+
+.address-text {
+  text-align: center;
+  max-width: 225px;
+  margin: 0 auto;
+  display: block; }
+
+.list-radio-specialist {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start; }
+  .list-radio-specialist li {
+    margin: 0 0 133px; }
+    .list-radio-specialist li:last-child, .list-radio-specialist li:nth-last-child(2) {
+      margin: 0; }
+
+.radio-specialist .psychologists-card {
+  margin: 0; }
+
+.radio-specialist h3 {
+  margin: 0 0 16px;
+  max-width: none;
+  text-align: left;
+  font-size: 24px; }
+
+.radio-specialist .psychologists-card__content span {
+  display: block; }
+
+.links-prev {
+  margin: 0 auto 44px;
+  font-weight: bold;
+  font-size: 20px;
+  color: #0abab5;
+  opacity: 0; }
+  .links-prev .links-icon {
+    margin: 0 13px 0 0;
+    min-width: 22px;
+    max-width: 22px;
+    height: 18px; }
+  .links-prev .svg-icon {
+    min-width: 22px;
+    max-width: 22px;
+    height: 18px;
+    stroke: #0abab5;
+    fill: none;
+    -webkit-transform: rotate(180deg);
+            transform: rotate(180deg); }
+  .links-prev:hover {
+    color: #38dcd7; }
+    .links-prev:hover .svg-icon {
+      stroke: #38dcd7;
+      fill: none; }
+
+/*==========  record page end  ==========*/
+/*==========  reviews page  ==========*/
+.reviews-page {
+  padding: 130px 0 144px; }
+  .reviews-page .subtext {
+    margin: 30px auto 122px; }
+
+.reviews-card-col {
+  margin-bottom: 63px; }
+  .reviews-card-col:last-child {
+    margin-bottom: 0; }
+
+.reviews-card {
+  width: 100%;
+  background: #fff;
+  -webkit-box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+  position: relative;
+  border-radius: 15px;
+  padding: 100px; }
+  .reviews-card__head {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0 0 38px;
+    margin: 0 0 60px;
+    border-bottom: 1px solid #c3c3c3; }
+  .reviews-card:last-child {
+    margin: 0; }
+  .reviews-card .psychologists-card__avatar {
+    margin: 0; }
+  .reviews-card .reviews-card__content {
+    width: calc(100% - 156px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    padding: 0 0 0 38px; }
+  .reviews-card h3 {
+    margin: 0 0 13px;
+    font-weight: bold; }
+  .reviews-card .box-text {
+    font-size: 20px; }
+
+.reviews-card__text {
+  max-width: 380px; }
+  .reviews-card__text .box-text {
+    margin: 0 0 28px;
+    font-size: 20px;
+    color: #626060; }
+
+.reviews-card-slider__item {
+  margin: 0 0 22px;
+  width: 100%; }
+  .reviews-card-slider__item .box-text {
+    margin: 25px 0 29px;
+    max-width: 920px;
+    max-height: 120px;
+    overflow: hidden; }
+    .reviews-card-slider__item .box-text.open {
+      overflow: visible;
+      max-height: none; }
+    .reviews-card-slider__item .box-text p {
+      margin: 0; }
+  .reviews-card-slider__item h4 {
+    font-weight: 900;
+    font-size: 24px;
+    letter-spacing: 0.6px; }
+  .reviews-card-slider__item .problem {
+    letter-spacing: 0.6px;
+    font-size: 24px;
+    font-weight: 300;
+    margin: 31px 0 0; }
+
+.reviews-card-slider__nav {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: -30px 0 0 auto; }
+  .reviews-card-slider__nav .slick-arrow {
+    width: 89px;
+    height: 36px; }
+  .reviews-card-slider__nav .slick-next {
+    margin: 0 0 0 90px; }
+
+/*==========  reviews page end  ==========*/
+/*==========  psychologists page  ==========*/
+.psychologists-all h2 {
+  margin: 0 auto 117px; }
+
+.psychologists-page {
+  padding: 200px 0 0; }
+  .psychologists-page .accordion {
+    max-width: none;
+    color: #393939;
+    margin: 53px 0 0; }
+    .psychologists-page .accordion .card {
+      overflow: visible; }
+  .psychologists-page .card-header {
+    position: relative;
+    z-index: 1;
+    margin: 0; }
+    .psychologists-page .card-header span, .psychologists-page .card-header .accordion-arrow {
+      background: #e3ffff; }
+    .psychologists-page .card-header .accordion-arrow img {
+      -webkit-transform: rotate(180deg);
+              transform: rotate(180deg); }
+    .psychologists-page .card-header:after {
+      content: '';
+      position: absolute;
+      width: calc(100% + 80px);
+      height: calc(100% + 40px);
+      left: 50%;
+      top: 50%;
+      border-radius: 15px;
+      -webkit-transform: translate(-50%, -50%);
+              transform: translate(-50%, -50%);
+      background: #e3ffff;
+      z-index: -1; }
+    .psychologists-page .card-header:before {
+      z-index: 1; }
+    .psychologists-page .card-header.collapsed .accordion-arrow img {
+      -webkit-transform: none;
+              transform: none; }
+    .psychologists-page .card-header.collapsed span, .psychologists-page .card-header.collapsed .accordion-arrow {
+      background: #fff; }
+    .psychologists-page .card-header.collapsed:after {
+      background: transparent; }
+  .psychologists-page .card-body {
+    padding: 55px 0 0; }
+  .psychologists-page .psychologists-card__user .btn {
+    margin: 0 auto; }
+  .psychologists-page .form-appointment {
+    margin: 0; }
+    .psychologists-page .form-appointment button {
+      margin: 58px 0 0; }
+
+.specialization {
+  margin: 31px 0 40px;
+  max-width: 300px;
+  font-size: 24px;
+  font-weight: bold; }
+
+.psychologists-page-content .box-text {
+  color: #393939; }
+  .psychologists-page-content .box-text ul {
+    font-size: 20px; }
+
+.details-info-specialist h4 {
+  font-size: 24px;
+  font-weight: 500;
+  margin: 0 0 37px; }
+
+.details-info-specialist .box-text {
+  margin: 0 0 39px; }
+  .details-info-specialist .box-text:last-child {
+    margin: 0; }
+
+.certificate-item {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  height: 100%; }
+
+.specialist-reviews-slider__item {
+  font-size: 24px;
+  letter-spacing: 0.6px; }
+
+.specialist-reviews-slider__nav {
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  margin: 68px 0 0; }
+  .specialist-reviews-slider__nav .slick-arrow {
+    width: 88px;
+    height: 35px; }
+  .specialist-reviews-slider__nav .slick-next {
+    margin: 0 0 0 92px; }
+
+.author-name {
+  margin: 20px 0 0; }
+
+/*==========  psychologists page end  ==========*/

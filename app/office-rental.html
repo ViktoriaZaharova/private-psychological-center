@@ -21,6 +21,7 @@
         integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
   <link rel="stylesheet" href="css/main.css">
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/footer.css">
@@ -34,7 +35,7 @@
 
 
   <!--### HEADER ###-->
-  <header>
+  <header class="header">
     <div class="mobile-menu">
       <div class="mobile-menu__body">
         <ul class="menu">
@@ -143,17 +144,23 @@
               почасовой аренды помещений нашего Психологического Центра.</p>
           </div>
 
-          <div class="nav nav-tabs nav-tabs-rental" id="nav-tab" role="tablist">
-            <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
-               aria-controls="nav-home" aria-selected="true">На Тихорецком пр.33, корп.1
-              (м. Политехническая)</a>
-            <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
-               aria-controls="nav-profile" aria-selected="false">На пл. Конституции, 2
-              (м. Московская, Ленинский пр)</a>
-            <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
-               aria-controls="nav-contact" aria-selected="false">На пр.Пятилеток д.2
-              (м.пр.Большевиков)</a>
-          </div>
+          <ul class="nav nav-tabs nav-tabs-rental" id="nav-tab" role="tablist">
+            <li>
+              <a class="nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab"
+                 aria-controls="nav-home" aria-selected="true">На Тихорецком пр.33, корп.1
+                (м. Политехническая)</a>
+            </li>
+            <li>
+              <a class="nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab"
+                 aria-controls="nav-profile" aria-selected="false">На пл. Конституции, 2
+                (м. Московская, Ленинский пр)</a>
+            </li>
+            <li>
+              <a class="nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab"
+                 aria-controls="nav-contact" aria-selected="false">На пр.Пятилеток д.2
+                (м.пр.Большевиков)</a>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -218,7 +225,7 @@
                   </div>
                 </div>
 
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6 d-none d-lg-block">
                   <div class="rental-office-gallery">
                     <div class="rental-office-slider">
                       <div class="slide">
@@ -300,7 +307,7 @@
                   </div>
                 </div>
 
-                <div class="col-12 col-lg-6">
+                <div class="col-12 col-lg-6 d-none d-lg-block">
                   <div class="rental-office-gallery">
                     <div class="rental-office-slider">
                       <div class="slide">
@@ -513,7 +520,7 @@
         crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
-
+<script src="https://alexandrebuffet.fr/codepen/slider/slick-animation.min.js"></script>
 <script src="js/common.js"></script>
 
 </body>
