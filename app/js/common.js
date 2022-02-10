@@ -276,7 +276,9 @@ $('.radio-specialist').on('click', function () {
     $('.form-step').removeClass('active');
     $(this).parents('.form-step').next('.form-step').addClass('active');
     $('.links-prev').css('opacity', 1);
-
+    $('html,body').animate({
+        scrollTop: 0
+    }, 1000);
 });
 
 $('.links-prev').on('click', function (e) {
@@ -285,3 +287,18 @@ $('.links-prev').on('click', function (e) {
     $(this).css('opacity', 0);
 });
 // forms step end
+
+//плавный скролл
+$(document).ready(function () {
+    $('.go_to').click(function (e) {
+        e.preventDefault();
+        var scroll_el = $(this).attr('href');
+        if ($(scroll_el).length !== 0) {
+            $('html, body').animate({
+                scrollTop: $(scroll_el).offset().top
+            }, 500);
+        }
+        return false;
+    });
+});
+//плавный скролл end
