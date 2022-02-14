@@ -132,40 +132,58 @@ header {
   display: none;
   position: absolute;
   z-index: 3;
-  right: 15px;
+  left: 0;
   top: 100%;
   -webkit-box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
           box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  background: rgba(255, 255, 255, 0.7);
-  max-width: 183px;
+  background: rgba(10, 186, 181, 0.7);
   width: 100%; }
   .mobile-menu__body {
     width: 100%;
     padding: 19px 20px; }
   .mobile-menu .menu {
     font-size: 14px;
-    text-align: left; }
+    text-align: left;
+    font-weight: bold; }
     .mobile-menu .menu li {
       margin: 0 0 20px;
       width: 100%; }
       .mobile-menu .menu li:last-child {
         margin: 0; }
+      .mobile-menu .menu li a {
+        color: #fff; }
   .mobile-menu__footer {
     width: 100%;
-    padding: 22px 28px 19px; }
+    padding: 22px 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.8); }
   .mobile-menu .phone {
-    margin: 0;
-    font-size: 12px;
-    font-weight: 300;
+    font-size: 16px;
     letter-spacing: 0.3px;
-    color: #000; }
+    color: #fff;
+    display: block;
+    margin: 0 15px;
+    font-weight: bold; }
   .mobile-menu .schedule {
-    font-size: 12px;
-    font-weight: 300;
-    color: #000;
+    font-size: 14px;
+    color: #fff;
     letter-spacing: 0.3px;
-    margin: 16px 0; }
+    margin: 0;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+    display: block; }
   .mobile-menu .messenger {
-    margin: 0 0 0 5px; }
+    margin: 0 0 0 5px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-filter: brightness(0) invert(1);
+            filter: brightness(0) invert(1); }
 
 /*==========  header end  ==========*/
